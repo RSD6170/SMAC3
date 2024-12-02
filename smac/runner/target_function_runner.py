@@ -235,7 +235,7 @@ class TargetFunctionRunner(AbstractSerialRunner):
 
         if cost is None:
             status = StatusType.CRASHED
-            cost = self.crash_cost
+            cost = self._crash_cost
 
         # We want to get either a float or a list of floats.
         cost = np.asarray(cost).squeeze().tolist()
